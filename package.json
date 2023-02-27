@@ -1,0 +1,27 @@
+{
+  "name": "vitepress-fe-nav",
+  "version": "1.0.0",
+  "description": "基于 VitePress 打造个人前端导航网站",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs --port=8732",
+    "build": "vitepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maomao1996/vitepress-fe-nav.git"
+  },
+  "author": "maomao1996 <1714487678@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maomao1996/vitepress-fe-nav/issues"
+  },
+  "homepage": "https://github.com/maomao1996/vitepress-fe-nav#readme",
+  "devDependencies": {
+    "@femm/prettier": "^1.0.1",
+    "sass": "^1.58.3",
+    "vitepress": "1.0.0-alpha.48",
+    "vue": "^3.2.47"
+  },
+  "prettier": "@femm/prettier"
+}
