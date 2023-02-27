@@ -19,6 +19,7 @@
   "homepage": "https://github.com/maomao1996/vitepress-fe-nav#readme",
   "devDependencies": {
     "@femm/prettier": "^1.0.1",
+    "@mdit-vue/shared": "^0.12.0",
     "sass": "^1.58.3",
     "vitepress": "1.0.0-alpha.48",
     "vue": "^3.2.47"
