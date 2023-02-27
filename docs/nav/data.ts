@@ -5,7 +5,6 @@ type NavData = {
   items: NavLink[]
 }
 
-/* 临时测试数据，后续慢慢完善 */
 export const NAV_DATA: NavData[] = [
   {
     title: '常用工具',
@@ -21,6 +20,18 @@ export const NAV_DATA: NavData[] = [
         title: 'TinyPNG',
         desc: '在线图片压缩工具',
         link: 'https://tinypng.com'
+      },
+      {
+        icon: 'https://tool.lu/favicon.ico',
+        title: '在线工具',
+        desc: '开发人员的工具箱',
+        link: 'https://tool.lu'
+      },
+      {
+        icon: '/icons/json-cn.ico',
+        title: 'Json 中文网',
+        desc: 'JSON 在线解析及格式化验证',
+        link: 'https://www.json.cn'
       }
     ]
   },
@@ -39,6 +50,30 @@ export const NAV_DATA: NavData[] = [
         title: 'React Router',
         desc: 'React 的声明式路由',
         link: 'https://reactrouter.com'
+      },
+      {
+        icon: 'https://nextjs.org/static/favicon/safari-pinned-tab.svg',
+        title: 'Next.js',
+        desc: '一个用于 Web 的 React 框架',
+        link: 'https://nextjs.org'
+      },
+      {
+        icon: 'https://img.alicdn.com/tfs/TB1YHEpwUT1gK0jSZFhXXaAtVXa-28-27.svg',
+        title: 'UmiJS',
+        desc: '插件化的企业级前端应用框架',
+        link: 'https://umijs.org'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png',
+        title: 'Ant Design',
+        desc: '一套企业级 UI 设计语言和 React 组件库',
+        link: 'https://ant.design'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg',
+        title: 'Ant Design Mobile',
+        desc: '构建移动 WEB 应用程序的 React 组件库',
+        link: 'https://mobile.ant.design'
       },
       {
         icon: 'https://docs.pmnd.rs/apple-touch-icon.png',
@@ -69,24 +104,6 @@ export const NAV_DATA: NavData[] = [
         title: 'MobX',
         desc: '一个小型、快速、可扩展的 React 状态管理解决方案',
         link: 'https://zh.mobx.js.org'
-      },
-      {
-        icon: 'https://nextjs.org/static/favicon/safari-pinned-tab.svg',
-        title: 'Next.js',
-        desc: '一个用于 Web 的 React 框架',
-        link: 'https://nextjs.org'
-      },
-      {
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png',
-        title: 'Ant Design',
-        desc: '一套企业级 UI 设计语言和 React 组件库',
-        link: 'https://ant.design'
-      },
-      {
-        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/69a27fcc-ce52-4f27-83f1-c44541e9b65d.svg',
-        title: 'Ant Design Mobile',
-        desc: '构建移动 WEB 应用程序的 React 组件库',
-        link: 'https://mobile.ant.design'
       },
       {
         icon: 'https://ahooks.js.org/simple-logo.svg',
@@ -158,6 +175,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Cube UI',
         desc: '基于 Vue.js 实现的精致移动端组件库',
         link: 'https://didi.github.io/cube-ui'
+      },
+      {
+        icon: 'https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png',
+        title: 'NutUI',
+        desc: '京东风格的轻量级移动端组件库',
+        link: 'https://nutui.jd.com'
       }
     ]
   },
@@ -171,7 +194,8 @@ export const NAV_DATA: NavData[] = [
         link: 'https://svelte.dev'
       },
       {
-        icon: 'https://simpleicons.org/icons/jquery.svg',
+        // icon: 'https://simpleicons.org/icons/jquery.svg',
+        icon: '/icons/jquery.svg',
         title: 'jQuery API 中文文档',
         desc: '一个兼容多浏览器的 JavaScript 框架',
         link: 'https://jquery.cuishifeng.cn'
@@ -202,8 +226,49 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '构建工具',
+    title: 'Node 相关',
     items: [
+      {
+        icon: 'https://nodejs.org/static/images/favicons/apple-touch-icon.png',
+        title: 'Node.js',
+        desc: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境',
+        link: 'https://nodejs.org/zh-cn'
+      },
+      {
+        icon: 'https://expressjs.com/images/favicon.png',
+        title: 'Express',
+        desc: '基于 Node.js 平台，快速、开放、极简的 Web 开发框架',
+        link: 'https://expressjs.com'
+      },
+      {
+        icon: 'https://nodejs.org/static/images/favicons/',
+        title: 'Koa',
+        desc: '基于 Node.js 平台的下一代 web 开发框架',
+        link: 'https://koajs.com'
+      },
+      {
+        icon: 'https://www.eggjs.org/favicon.png',
+        title: 'Egg',
+        desc: '为企业级框架和应用而生',
+        link: 'https://www.eggjs.org/zh-CN'
+      },
+      {
+        icon: 'https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg',
+        title: 'Nest.js 中文文档',
+        desc: '用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架',
+        link: 'https://docs.nestjs.cn'
+      }
+    ]
+  },
+  {
+    title: '编译&构建&打包',
+    items: [
+      {
+        icon: 'https://www.webpackjs.com/icon_180x180.png',
+        title: 'Webpack 中文网',
+        desc: '一个用于现代 JavaScript 应用程序的静态模块打包工具',
+        link: 'https://www.webpackjs.com'
+      },
       {
         icon: 'https://cn.vitejs.dev/logo.svg',
         title: 'Vite 中文文档',
@@ -211,21 +276,51 @@ export const NAV_DATA: NavData[] = [
         link: 'https://cn.vitejs.dev'
       },
       {
-        icon: 'https://www.webpackjs.com/icon_180x180.png',
-        title: 'Webpack 中文网',
-        desc: '一个用于现代 JavaScript 应用程序的静态模块打包工具',
-        link: 'https://www.webpackjs.com'
+        icon: 'https://www.rollupjs.com/img/favicon.png',
+        title: 'Rollup',
+        desc: 'Rollup 是一个 JavaScript 模块打包器',
+        link: 'https://www.rollupjs.com'
+      },
+      {
+        icon: 'https://turbo.build/images/favicon-dark/apple-touch-icon.png',
+        title: 'Turbo',
+        desc: 'Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust',
+        link: 'https://turbo.build'
+      },
+      {
+        icon: 'https://www.babeljs.cn/img/favicon.png',
+        title: 'Babel',
+        desc: 'Babel 是一个 JavaScript 编译器',
+        link: 'https://www.babeljs.cn'
+      },
+      {
+        icon: 'https://esbuild.github.io/favicon.svg',
+        title: 'esbuild',
+        desc: 'An extremely fast bundler for the web',
+        link: 'https://esbuild.github.io'
+      },
+      {
+        icon: 'https://swc.rs/favicon/apple-touch-icon.png',
+        title: 'SWC',
+        desc: 'Rust-based platform for the Web',
+        link: 'https://swc.rs'
       }
     ]
   },
   {
-    title: '语言文档和规范',
+    title: '前端学习资料',
     items: [
       {
         icon: 'https://developer.mozilla.org/apple-touch-icon.6803c6f0.png',
         title: 'MDN | Web 开发者指南',
         desc: 'Mozilla 的开发者平台，提供了大量关于 HTML、CSS 和 JavaScript 的详细文档以及广泛的 Web API 参考资',
         link: 'https://developer.mozilla.org/zh-CN'
+      },
+      {
+        icon: 'https://static.runoob.com/images/favicon.ico',
+        title: '菜鸟教程',
+        desc: '学的不仅是技术，更是梦想！',
+        link: 'https://www.runoob.com'
       }
     ]
   },
@@ -265,10 +360,17 @@ export const NAV_DATA: NavData[] = [
         link: 'https://segmentfault.com'
       },
       {
+        title: '博客园',
+        // icon: 'https://common.cnblogs.com/favicon.ico',
+        icon: '/icons/cnblogs.svg',
+        desc: '博客园是一个面向开发者的知识分享社区',
+        link: 'https://www.cnblogs.com'
+      },
+      {
         title: '知乎',
         icon: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png',
         desc: '中文互联网高质量的问答社区和创作者聚集的原创内容平台',
-        link: 'https://www.zhihu.com'
+        link: 'https://juejin.cn'
       }
     ]
   },
@@ -276,16 +378,22 @@ export const NAV_DATA: NavData[] = [
     title: '摸摸鱼',
     items: [
       {
-        icon: '/logo.png',
-        title: 'mmPlayer',
-        desc: '',
-        link: 'https://netease-music.fe-mm.com'
-      },
-      {
         icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
         title: 'YouTube',
         desc: '',
         link: 'https://www.youtube.com'
+      },
+      {
+        icon: '/icons/twitter.svg',
+        title: 'Twitter',
+        desc: '',
+        link: 'https://twitter.com'
+      },
+      {
+        icon: 'https://momoyu.cc/icon-192.png',
+        title: '摸摸鱼热榜',
+        // desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
+        link: 'https://momoyu.cc'
       }
     ]
   }
