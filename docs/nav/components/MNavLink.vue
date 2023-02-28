@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { slugify } from '@mdit-vue/shared'
 
 import { NavLink } from './type'
 
@@ -9,6 +10,13 @@ const props = defineProps<{
   desc?: NavLink['desc']
   link: NavLink['link']
 }>()
+
+const formatTitle = computed(() => {
+  if (!props.title) {
+    return ''
+  }
+  return slugify(props.title)
+})
 
 const svg = computed(() => {
   if (typeof props.icon === 'object') return props.icon.svg
@@ -24,7 +32,7 @@ const svg = computed(() => {
         <div v-else-if="icon && typeof icon === 'string'" class="icon">
           <img :src="icon" :alt="title" onerror="this.parentElement.style.display='none'" />
         </div>
-        <h6 v-if="title" class="title">{{ title }}</h6>
+        <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
