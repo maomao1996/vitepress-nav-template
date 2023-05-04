@@ -1,0 +1,58 @@
+name: GitHub Actions Build and Deploy
+
+# 触发条件
+on:
+  # 手动触发
+  workflow_dispatch:
+  # push 到指定分支
+  push:
+    branches:
+      - main
+    # 只在下列路径变更时触发
+    paths:
+      - 'docs/**'
+      - 'package.json'
+
+# 设置上海时区
+env:
+  TZ: Asia/Shanghai
+
+# 任务
+jobs:
+  build-and-deploy:
+    # 服务器环境：最新版 ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      # 设置 node 版本
+      - name: Set node version to 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      # 打包静态文件
+      - name: Build
+        run: pnpm install && pnpm run build:github
+
+      # 部署
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          # GitHub 密钥
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # GitHub Pages 读取的分支
+          BRANCH: gh-pages
+          # 静态文件所在目录
+          FOLDER: dist
