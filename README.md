@@ -2,6 +2,11 @@
 
 > `VitePress` 基础模板
 
+## 访问地址
+
+- <https://fe-nav.netlify.app/nav/>
+- <https://maomao1996.github.io/vitepress-fe-nav/nav/>
+
 ## 功能
 
 - 新增 `layout-class` 方便更好的自定义样式
