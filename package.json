@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vitepress dev docs --port=8732",
     "build": "vitepress build docs",
-    "build:github": "cross-env APP_BASE_PATH=/vitepress-fe-nav/ vitepress build docs"
+    "build:github": "cross-env APP_BASE_PATH=/vitepress-fe-nav/ vitepress build docs",
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -19,13 +21,22 @@
   },
   "homepage": "https://github.com/maomao1996/vitepress-fe-nav#readme",
   "devDependencies": {
-    "@femm/prettier": "^1.0.1",
+    "@femm/prettier": "^1.0.2",
+    "@femm/verify-commit": "^1.0.1",
     "@mdit-vue/shared": "^0.12.0",
     "@types/node": "^18.16.3",
     "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "sass": "^1.58.3",
     "vitepress": "1.0.0-alpha.48",
     "vue": "^3.2.47"
   },
-  "prettier": "@femm/prettier"
+  "prettier": "@femm/prettier",
+  "lint-staged": {
+    "*.{js,jsx,tsx,vue,css,scss,less,md,json}": [
+      "prettier --write"
+    ]
+  }
 }
