@@ -4,7 +4,7 @@
 <img src="/docs/public/index-example.webp"/>
 </p>
 <p align="center"> 基于 <b>VitePress</b> 的个人前端导航页面模板 </p>
-<p align='center'><a href="/guide.md">基础教程</a> | <a href="https://fe-mm.com/">作者博客</a></p>
+<p align='center'><a href="/guide.md">基础教程</a> | <a href="https://notes.fe-mm.com/">作者博客</a></p>
 
 ---
 
