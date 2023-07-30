@@ -24,7 +24,11 @@ export default {
     if (typeof window !== 'undefined') {
       watch(
         () => router.route.data.relativePath,
-        () => updateHomePageStyle(location.pathname === '/'),
+        () =>
+          updateHomePageStyle(
+            /* /vitepress-nav-template/ 是为了兼容 GitHub Pages */
+            location.pathname === '/' || location.pathname === '/vitepress-nav-template/'
+          ),
         { immediate: true }
       )
     }
