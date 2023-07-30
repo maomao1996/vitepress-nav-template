@@ -1,25 +1,25 @@
 {
-  "name": "vitepress-fe-nav",
+  "name": "vitepress-nav-template",
   "version": "1.0.0",
   "description": "基于 VitePress 打造个人前端导航网站",
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs --port=8732",
     "build": "vitepress build docs",
-    "build:github": "cross-env APP_BASE_PATH=/vitepress-fe-nav/ vitepress build docs",
+    "build:github": "cross-env APP_BASE_PATH=/vitepress-nav-template/ vitepress build docs",
     "prepare": "husky install",
     "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maomao1996/vitepress-fe-nav.git"
+    "url": "git+https://github.com/maomao1996/vitepress-nav-template.git"
   },
   "author": "maomao1996 <1714487678@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maomao1996/vitepress-fe-nav/issues"
+    "url": "https://github.com/maomao1996/vitepress-nav-template/issues"
   },
-  "homepage": "https://github.com/maomao1996/vitepress-fe-nav#readme",
+  "homepage": "https://github.com/maomao1996/vitepress-nav-template#readme",
   "devDependencies": {
     "@femm/prettier": "^1.0.2",
     "@femm/verify-commit": "^1.0.1",

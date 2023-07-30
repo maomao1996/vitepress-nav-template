@@ -41,7 +41,7 @@ features:
 
 ### 2.导航栏与页脚
 
-**2.1 导航栏**
+**2.1 导航栏**：
 
 修改位置：/docs/.vitepress/configs/nav.ts
 
@@ -52,19 +52,19 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '个人主页', link: 'https://fe-mm.com' }, //切行无影响
   {
     text: '茂茂物语', //显示文本
-    link: 'https://notes.fe-mm.com', //链接
-  },
+    link: 'https://notes.fe-mm.com' //链接
+  }
 ]
 ```
 
-**2.2 社交链接&页脚**
+**2.2 社交链接&页脚**：
 
 修改位置：/docs/nav/index.md
 
 ```ts
 export default defineConfig({
     ---
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-fe-nav' }], //社交链接
+    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }], //社交链接
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
@@ -130,7 +130,7 @@ export const NAV_ATA: NAVATA[] = [
 
 ### 2.页面自定义
 
-**2.1 添加其他元素**
+**2.1 添加其他元素**：
 
 修改位置：/docs/nav/index.md
 
@@ -141,31 +141,27 @@ Nav 页本身属于 MD 文件渲染，因此除引用的 data 文件用于数据
 ```ts
 # 前端导航  //标题
 
-::: tip
-该导航由 [maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-fe-nav>
-:::  //引用Notes提示块
-
 <MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>  //引用data.ts文件显示站点列表
 
 <br />
 
 ::: tip
-该导航由 [maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-fe-nav>
+该导航由 [maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-nav-template>
 :::  //引用Notes提示块
 ```
 
-**2.2 其他部分**
+**2.2 其他部分**：
 
 修改位置：/docs/.vitepress/config.ts
 
 ## 三、站点属性配置
 
-**3.1 站点图标（favicon）**
+**3.1 站点图标（favicon）**：
 
 修改位置：/docs/.vitepress/configs/head.ts  
 在对应位置更改即可。
 
-**3.2 站点标题与图标**
+**3.2 站点标题与图标**：
 
 修改位置：/docs/.vitepress/config.ts
 

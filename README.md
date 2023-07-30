@@ -1,4 +1,4 @@
-# vitepress-fe-nav
+# vitepress-nav-template
 
 <p align="center">
 <img src="/docs/public/index-example.webp"/>
@@ -8,10 +8,10 @@
 
 ---
 
-## 个人模板地址
+## 预览地址
 
 - <https://fe-nav.netlify.app/nav/>
-- <https://maomao1996.github.io/vitepress-fe-nav/nav/>
+- <https://maomao1996.github.io/vitepress-nav-template/nav/>
 
 ## 功能
 
@@ -23,4 +23,4 @@
 
 ## 说明
 
-前端导航模块由 [茂茂 | maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-fe-nav>
+前端导航模块由 [茂茂 | maomao](https://github.com/maomao1996) 开发，如有引用、借鉴的请保留版权声明：<https://github.com/maomao1996/vitepress-nav-template>
