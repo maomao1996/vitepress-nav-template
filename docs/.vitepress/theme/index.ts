@@ -1,10 +1,13 @@
-import { h } from 'vue'
-import { useData } from 'vitepress'
-import Theme from 'vitepress/theme'
+import { h, watch } from 'vue'
+import { useData, EnhanceAppContext } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
 
 import './styles/index.scss'
 
-export default Object.assign({}, Theme, {
+let homePageStyle: HTMLStyleElement | undefined
+
+export default {
+  extends: DefaultTheme,
   Layout: () => {
     const props: Record<string, any> = {}
     // 获取 frontmatter
@@ -15,6 +18,46 @@ export default Object.assign({}, Theme, {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(Theme.Layout, props)
+    return h(DefaultTheme.Layout, props)
+  },
+  enhanceApp({ router }: EnhanceAppContext) {
+    if (typeof window !== 'undefined') {
+      watch(
+        () => router.route.data.relativePath,
+        () => updateHomePageStyle(location.pathname === '/'),
+        { immediate: true }
+      )
+    }
   }
-})
+}
+
+if (typeof window !== 'undefined') {
+  // detect browser, add to class for conditional styling
+  const browser = navigator.userAgent.toLowerCase()
+  if (browser.includes('chrome')) {
+    document.documentElement.classList.add('browser-chrome')
+  } else if (browser.includes('firefox')) {
+    document.documentElement.classList.add('browser-firefox')
+  } else if (browser.includes('safari')) {
+    document.documentElement.classList.add('browser-safari')
+  }
+}
+
+// Speed up the rainbow animation on home page
+function updateHomePageStyle(value: boolean) {
+  if (value) {
+    if (homePageStyle) return
+
+    homePageStyle = document.createElement('style')
+    homePageStyle.innerHTML = `
+    :root {
+      animation: rainbow 12s linear infinite;
+    }`
+    document.body.appendChild(homePageStyle)
+  } else {
+    if (!homePageStyle) return
+
+    homePageStyle.remove()
+    homePageStyle = undefined
+  }
+}
