@@ -8,7 +8,7 @@
 
 这里指前端导航页访问的初始页面。
 
-![](/docs/public/index-example.webp)
+![首页](https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/home.webp)
 
 ### 1.主体部分
 
@@ -75,9 +75,9 @@ export default defineConfig({
 
 ## 二、站点列表页
 
-一般对应 `https://域名(ip)/nav`
+一般对应 `https://域名(ip)/nav/`
 
-![](/docs/public/Nav-example.webp)
+![站点列表页](https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/nav.webp)
 
 ### 1.站点列表数据
 
@@ -96,7 +96,7 @@ export default defineConfig({
 基本结构如下:
 
 ```ts
-export const NAV_ATA: NAVATA[] = [
+export const NAV_ATA: NavData[] = [
   {
     title: '类别1' //分类标题
     items: [
