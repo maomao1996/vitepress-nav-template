@@ -2,6 +2,8 @@ import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
+import { createMediumZoomProvider } from './composables/useMediumZoom'
+
 import './styles/index.scss'
 
 let homePageStyle: HTMLStyleElement | undefined
@@ -20,7 +22,9 @@ export default {
 
     return h(DefaultTheme.Layout, props)
   },
-  enhanceApp({ router }: EnhanceAppContext) {
+  enhanceApp({ app, router }: EnhanceAppContext) {
+    createMediumZoomProvider(app, router)
+
     if (typeof window !== 'undefined') {
       watch(
         () => router.route.data.relativePath,
