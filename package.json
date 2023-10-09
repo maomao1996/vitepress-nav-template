@@ -1,5 +1,6 @@
 {
   "name": "vitepress-nav-template",
+  "type": "module",
   "version": "1.0.0",
   "description": "基于 VitePress 打造个人前端导航网站",
   "private": true,
@@ -31,7 +32,7 @@
     "medium-zoom": "^1.0.8",
     "prettier": "^2.8.8",
     "sass": "^1.58.3",
-    "vitepress": "1.0.0-alpha.48",
+    "vitepress": "1.0.0-rc.20",
     "vue": "^3.2.47"
   },
   "prettier": "@femm/prettier",

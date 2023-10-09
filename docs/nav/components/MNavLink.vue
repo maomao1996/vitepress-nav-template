@@ -54,13 +54,14 @@ const svg = computed(() => {
   border: 1px solid var(--vp-c-bg-soft);
   border-radius: 8px;
   height: 100%;
-  background-color: var(--vp-c-bg-soft);
+  text-decoration: inherit;
+  background-color: var(--vp-c-bg-alt);
   transition: all 0.25s;
   &:hover {
     box-shadow: var(--vp-shadow-2);
     border-color: var(--vp-c-brand);
     text-decoration: initial;
-    background-color: var(--vp-c-bg-soft-up);
+    background-color: var(--vp-c-bg);
   }
 
   .box {
@@ -84,7 +85,7 @@ const svg = computed(() => {
     width: var(--m-nav-icon-box-size);
     height: var(--m-nav-icon-box-size);
     font-size: var(--m-nav-icon-size);
-    background-color: var(--vp-c-bg-soft-down);
+    background-color: var(--vp-c-default-soft);
     transition: background-color 0.25s;
     :deep(svg) {
       width: var(--m-nav-icon-size);
