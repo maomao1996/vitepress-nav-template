@@ -16,7 +16,7 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   /* 主题配置 */
@@ -30,14 +30,14 @@ export default defineConfig({
     /* 右侧大纲配置 */
     outline: {
       level: 'deep',
-      label: '本页目录'
+      label: '本页目录',
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996/vitepress-nav-template' }],
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao'
+      copyright: 'Copyright © 2019-present maomao',
     },
 
     darkModeSwitchLabel: '外观',
@@ -46,7 +46,7 @@ export default defineConfig({
 
     docFooter: {
       prev: '上一篇',
-      next: '下一篇'
-    }
-  }
+      next: '下一篇',
+    },
+  },
 })
