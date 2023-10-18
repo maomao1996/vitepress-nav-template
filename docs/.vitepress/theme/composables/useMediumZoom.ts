@@ -32,7 +32,7 @@ export const createMediumZoomProvider = (app: App, router: Router) => {
   watch(
     () => router.route.path,
     // 使用 nextTick 时在 dev 环境下第一次进入页面无法触发
-    () => setTimeout(() => zoom.refresh())
+    () => setTimeout(() => zoom.refresh()),
   )
 }
 

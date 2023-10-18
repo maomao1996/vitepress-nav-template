@@ -52,8 +52,8 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '个人主页', link: 'https://fe-mm.com' }, //切行无影响
   {
     text: '茂茂物语', //显示文本
-    link: 'https://notes.fe-mm.com' //链接
-  }
+    link: 'https://notes.fe-mm.com', //链接
+  },
 ]
 ```
 
