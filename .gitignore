@@ -1,26 +1,32 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Editor directories and files
+# editor directories and files
 .idea
 .vscode
 
 # dependencies
 node_modules
 
-# compile
+# compiled output
+dist
+dist-dev
 build
 cache
-dist
+.cache
 .temp
+.tmp
+.turbo
 
-# lock files
-package-lock.json
+# log and lock files
+*.log
 yarn.lock
+package-lock.json
 
-# log files
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+# local env files
+.env.local
+.env.*.local
 
 # misc
 .DS_Store
+
+# user-specific files
