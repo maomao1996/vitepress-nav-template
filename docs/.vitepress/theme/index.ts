@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
+import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
 
 import './styles/index.scss'
@@ -22,7 +23,7 @@ export default {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(DefaultTheme.Layout, props)
+    return h(MLayout, props)
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
