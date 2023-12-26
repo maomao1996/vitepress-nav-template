@@ -4,6 +4,8 @@ import DefaultTheme from 'vitepress/theme'
 
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
+import MNavLinks from './components/MNavLinks.vue'
+
 import './styles/index.scss'
 
 let homePageStyle: HTMLStyleElement | undefined
@@ -24,6 +26,8 @@ export default {
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
+
+    app.component('MNavLinks', MNavLinks)
 
     if (typeof window !== 'undefined') {
       watch(
