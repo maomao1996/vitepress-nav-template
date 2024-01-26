@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar } from './configs'
 
@@ -48,5 +49,9 @@ export default defineConfig({
       prev: '上一篇',
       next: '下一篇',
     },
+  },
+
+  vite: {
+    plugins: [MarkdownPreview()],
   },
 })
