@@ -1,7 +1,7 @@
 # vitepress-nav-template
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/home.webp"/>
+  <img src="https://raw.githubusercontent.com/maomao1996/picture/main/vitepress-nav-template/home.webp" alt="home" />
 </p>
 <p align="center"> 基于 <b>VitePress</b> 的个人前端导航页面模板 </p>
 <p align='center'><a href="/guide.md">基础教程</a> | <a href="https://notes.fe-mm.com/">作者博客</a></p>
@@ -20,6 +20,8 @@
 - 自带前端导航模块
 - 支持日夜颜色模式自适应切换
 - 支持 Github Pages 直接部署上线
+- 支持 [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
+- 支持查看 vue 示例组件源码（使用 [vite-plugin-markdown-preview](https://github.com/jaskang/vite-plugin-markdown-preview)）
 
 ## 说明
 
