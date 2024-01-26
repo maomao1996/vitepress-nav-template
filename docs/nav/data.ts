@@ -1,4 +1,4 @@
-import type { NavLink } from './components/type'
+import type { NavLink } from '../.vitepress/theme/types'
 
 type NavData = {
   title: string
