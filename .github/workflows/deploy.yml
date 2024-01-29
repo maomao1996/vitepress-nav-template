@@ -13,6 +13,10 @@ on:
       - 'docs/**'
       - 'package.json'
 
+# 设置权限
+permissions:
+  contents: write
+
 # 设置上海时区
 env:
   TZ: Asia/Shanghai
@@ -25,9 +29,9 @@ jobs:
     steps:
       # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          fetch-depth: 0
 
       # 安装 pnpm
       - name: Install pnpm
@@ -44,15 +48,15 @@ jobs:
 
       # 打包静态文件
       - name: Build
-        run: pnpm install && pnpm run build:github
+        env:
+          APP_BASE_PATH: /${{ github.repository }}
+        run: pnpm install && pnpm run build
 
       # 部署
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # GitHub 密钥
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           # GitHub Pages 读取的分支
-          BRANCH: gh-pages
+          branch: gh-pages
           # 静态文件所在目录
-          FOLDER: dist
+          folder: dist
