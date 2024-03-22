@@ -26,6 +26,9 @@ jobs:
   build-and-deploy:
     # 服务器环境：最新版 ubuntu
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
     steps:
       # 拉取代码
       - name: Checkout
@@ -40,10 +43,10 @@ jobs:
           version: 8
 
       # 设置 node 版本
-      - name: Set node version to 18
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
       # 打包静态文件
