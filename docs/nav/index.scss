@@ -14,22 +14,18 @@
   /* aside 样式 */
   .aside {
     padding-left: 0;
-    max-width: 160px;
+    max-width: 224px;
   }
 
-  .content {
-    padding-bottom: 32px;
-    .VPDocFooter {
-      display: none;
-    }
-  }
-
-  /* tip */
-  .tip {
+  /* custom-block */
+  .custom-block {
     .custom-block-title {
-      display: none;
+      font-size: var(--vp-custom-block-font-size);
     }
-    p {
+    ul {
+      margin: 8px 0;
+    }
+    li {
       margin: 0;
     }
   }
