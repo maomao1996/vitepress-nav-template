@@ -28,6 +28,8 @@ export default {
   enhanceApp({ app, router }: EnhanceAppContext) {
     createMediumZoomProvider(app, router)
 
+    app.provide('DEV', process.env.NODE_ENV === 'development')
+
     app.component('MNavLinks', MNavLinks)
 
     if (typeof window !== 'undefined') {

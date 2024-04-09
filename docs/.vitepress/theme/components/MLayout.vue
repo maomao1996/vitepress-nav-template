@@ -3,6 +3,9 @@ import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 
+import MNavVisitor from './MNavVisitor.vue'
+import MDocFooter from './MDocFooter.vue'
+
 const { Layout } = DefaultTheme
 const { isDark } = useData()
 
@@ -42,5 +45,17 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <Layout v-bind="$attrs" />
+  <Layout v-bind="$attrs">
+    <!--
+      相关插槽
+      https://vitepress.dev/zh/guide/extending-default-theme#layout-slots
+      https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
+    -->
+    <template #nav-bar-title-after>
+      <MNavVisitor />
+    </template>
+    <template #doc-after>
+      <MDocFooter />
+    </template>
+  </Layout>
 </template>
