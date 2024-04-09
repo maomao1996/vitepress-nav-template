@@ -25,6 +25,7 @@
     "@femm/prettier": "^1.1.0",
     "@femm/tailwind-config": "^1.0.0",
     "@femm/verify-commit": "^1.0.1",
+    "@giscus/vue": "^3.0.0",
     "@mdit-vue/shared": "^0.12.1",
     "@types/node": "^18.18.6",
     "autoprefixer": "^10.4.17",
