@@ -45,5 +45,10 @@
     "*.{js,jsx,tsx,vue,css,scss,less,md,json}": [
       "prettier --write"
     ]
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "vite-plugin-markdown-preview@1.1.1": "patches/vite-plugin-markdown-preview@1.1.1.patch"
+    }
   }
 }
