@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, inBrowser } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
 import Giscus from '@giscus/vue'
@@ -19,9 +19,20 @@ const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
+function updateMetaThemeColor() {
+  if (inBrowser) {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]')!
+    // #1b1b1f 是 vitepress 在 dark 模式下的背景色
+    metaThemeColor.setAttribute('content', isDark.value ? '#1b1b1f' : '#3eaf7c')
+  }
+}
+
+updateMetaThemeColor()
+
 provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   if (!enableTransitions()) {
     isDark.value = !isDark.value
+    updateMetaThemeColor()
     return
   }
 
@@ -36,6 +47,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   // @ts-ignore
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value
+    updateMetaThemeColor()
     await nextTick()
   }).ready
 
