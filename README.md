@@ -23,8 +23,8 @@
 - 支持日夜颜色模式自适应切换
 - 支持 Github Pages 直接部署上线
   - 1. 开启 github actions
-  - 2. 配置 Pages 为 `gh-pages` 分支
-  - 3. 访问地址为 `https://<username>.github.io/<repository>/`
+  - 2. 配置 Pages 的 Branch 为 `gh-pages` 分支，文件夹为 `/(root)`
+  - 3. 访问地址为 `https://<username>.github.io/<repository>/` 或自定义域名
 - 支持 [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
 - 支持查看 vue 示例组件源码（使用 [vite-plugin-markdown-preview](https://github.com/jaskang/vite-plugin-markdown-preview)）
 
