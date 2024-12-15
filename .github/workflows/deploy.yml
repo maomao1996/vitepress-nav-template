@@ -57,9 +57,9 @@ jobs:
 
       # 部署
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
           # GitHub Pages 读取的分支
-          branch: gh-pages
+          publish_branch: gh-pages
           # 静态文件所在目录
-          folder: dist
+          publish_dir: dist
