@@ -28,6 +28,14 @@
 - 支持 [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
 - 支持查看 vue 示例组件源码（使用 [vite-plugin-markdown-preview](https://github.com/jaskang/vite-plugin-markdown-preview)）
 
+## 本地启动
+
+1. 下载并安装 [Node.js](https://nodejs.org/zh-cn/download) 推荐 20 版本及更高版本
+2. 开启 `corepack enable`
+3. 安装依赖 `pnpm install`
+4. 启动本地服务 `pnpm dev`
+5. 访问 `http://localhost:8732` 查看效果
+
 #### 使用自定义域名部署
 
 当 Github Pages 使用自定义域名时，需要修改 `.github/workflows/deploy.yml` 脚本中的 `APP_BASE_PATH` 为 `/`
@@ -42,7 +50,7 @@
 
 - **构建命令：** `npm run build`
 - **输出目录：** `dist`
-- **node 版本：** `18` (或更高版本)
+- **node 版本：** `20` (或更高版本)
 
 更多部署指南请查看 [VitePress 各平台部署指南](https://vitepress.dev/zh/guide/deploy#platform-guides)
 
