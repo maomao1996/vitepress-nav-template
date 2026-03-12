@@ -23,10 +23,17 @@ const svg = computed(() => {
   if (typeof props.icon === 'object') return props.icon.svg
   return ''
 })
+// 处理article链接的 base 路径
+const resolvedLink = computed(() => {
+  return withBase(props.link)
+})
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+  <!-- 原先的绝对路径 -->
+  <!-- <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer"> -->
+  <!-- 对/article/、/others/链接使用相对路径 -->
+  <a v-if="link" class="m-nav-link" :href="resolvedLink" target="_blank" rel="noreferrer">
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
